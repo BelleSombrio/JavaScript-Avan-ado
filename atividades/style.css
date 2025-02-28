@@ -1,0 +1,10 @@
+
+.retangulo{
+    background-color:  pink;
+    height: 80px;
+    width: 100px;
+}
+.retangulo-azul{
+    background-color: blue;
+    border-radius: 20%;
+}
