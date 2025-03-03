@@ -1,0 +1,152 @@
+html {
+    background-image: url(imagens/fundo.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.title h1 {
+    text-align: center;
+    font-family: "Ketchum";
+    letter-spacing: 10px;
+    font-size: 70px;
+    background: -webkit-linear-gradient(#9f0aef, #0d74c9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lista-pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lista-pokemon .pokemon {
+    display: flex;
+    flex-direction: column; /* Layout inicial em coluna */
+    align-items: center; /* Centraliza os elementos */
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+    width: 300px;
+    height: 400px; /* Tamanho inicial do Pokémon */
+    transition: all 0.3s ease;
+    margin-bottom: 50px;
+    cursor: pointer;
+    overflow: hidden; /* Impede que o conteúdo "vaze" */
+}
+
+.pokemon:hover {
+    transform: scale(1.05);
+}
+
+.lista-pokemon .pokemon .nome {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: "Rubik", sans-serif;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.652);
+    text-align: center;
+}
+
+.lista-pokemon .pokemon .tipo {
+    letter-spacing: 2px;
+    opacity: 0.8;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.lista-pokemon .pokemon img {
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+/* Wrapper para as informações adicionais (peso, altura, geração, info) */
+.lista-pokemon .pokemon .info-wrapper {
+    display: flex;
+    flex-direction: column; /* Informações empilhadas */
+    justify-content: flex-start; /* As informações começam empilhadas */
+    margin-top: 10px;
+    margin-left: 20px; /* Espaço entre a imagem e as informações */
+    width: 100%;
+    padding-left: 10px;
+}
+
+/* As informações começam invisíveis */
+.lista-pokemon .pokemon .peso,
+.lista-pokemon .pokemon .altura,
+.lista-pokemon .pokemon .geracao,
+.lista-pokemon .pokemon .info {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    display: none; /* Fica invisível inicialmente */
+    text-align: left;
+    margin-top: 5px;
+}
+
+/* Quando expandido, as informações ficam visíveis e o Pokémon se expande */
+.lista-pokemon .pokemon.expandido {
+    height: 350px; /* Expande a altura para acomodar as informações extras */
+    flex-direction: row; /* Layout muda para linha */
+    align-items: flex-start; /* Alinha o conteúdo no topo */
+    width: 700px; /* Expande a largura para acomodar as informações ao lado */
+}
+
+.lista-pokemon .pokemon.expandido .peso,
+.lista-pokemon .pokemon.expandido .altura,
+.lista-pokemon .pokemon.expandido .geracao,
+.lista-pokemon .pokemon.expandido .info {
+    display: block; /* Torna as informações visíveis */
+   
+}
+
+/* Estilos específicos para os tipos de Pokémon */
+.terrestre {
+    background-color: #76511b;
+    color: white;
+}
+
+.agua {
+    background-color: #1761b5;
+}
+
+.normal {
+    background-color: #8b8b8b;
+}
+
+.grama {
+    background-color: rgb(58, 170, 58);
+}
+
+.fantasma {
+    background-color: #330557;
+    color: white;
+}
+
+.metal {
+    color: #000;
+    background: linear-gradient(
+        45deg,
+        #999 5%,
+        #fff 10%,
+        #ccc 30%,
+        #ddd 50%,
+        #ccc 70%,
+        #fff 80%,
+        #999 95%
+    );
+}
