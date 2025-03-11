@@ -80,13 +80,14 @@ pokemons.forEach(pokemon => {
     let lista = document.querySelector(".lista-pokemon");
     lista.innerHTML += `
         <div class="pokemon ${pokemon.nome}">
-            <div class="nome">
+           <div> <div class="nome">
                 <p>${pokemon.nome}</p>
             </div>
             <div class="tipo ${pokemon.tipo}">
                 <p>${pokemon.tipo}</p>
             </div>
             <img src="${pokemon.imagem}.png" alt="${pokemon.nome}">
+            </div>
             <div class="info-wrapper">
                 <div class="peso">
                     <p>${pokemon.peso}</p>

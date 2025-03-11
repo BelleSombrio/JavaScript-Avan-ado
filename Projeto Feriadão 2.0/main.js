@@ -52,7 +52,7 @@ let personagens = [
 
 personagens.forEach(personagem => {
     let lista = document.querySelector(".lista-personagens");
-    lista.innerHTML +- `
+    lista.innerHTML += `
      <div class="personagem ${personagem.nome}">
             <div class="nome">
                 <p>${personagem.nome}</p>
@@ -60,9 +60,9 @@ personagens.forEach(personagem => {
             <div class="aniversario ${personagem.aniversario}">
                 <p>${personagem.aniversario}</p>
             </div>
-            <img src="${personagem.imagem}.png" alt="${personagem.nome}">
+            <img src="imagem/${personagem.imagem}" alt="${personagem.nome}">
             <div class="info-wrapper">
-                <div class="tipo">
+                <div class="tipo ${personagem.tipo}">
                     <p>${personagem.tipo}</p>
                 </div>
                 <div class="presentes">
