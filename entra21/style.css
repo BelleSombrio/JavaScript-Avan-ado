@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(255, 216, 216);
+}
+
+h1 {
+    color: rgb(173, 27, 27);
+    text-align: center;
+}
+
+
+.texto {
+    color: rgb(173, 27, 27);
+}
+
+img {
+    display: block;
+    margin: auto;
+
+}
+
+.paragrafo {
+    text-align: center;
+}
