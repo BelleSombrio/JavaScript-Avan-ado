@@ -18,10 +18,6 @@ html {
     font-size: 30px;
     color: #fc0;
     text-shadow: 2px 2px 0px #996600 ;
-    
-   
-    
-    
 }
 
 .lista-personagens {
@@ -42,8 +38,8 @@ html {
     padding: 20px;
     border-radius: 10px;
     margin-top: 40px;
-    width: 300px;
-    height: 400px; /* Tamanho inicial do Pokémon */
+    width: 250px;
+    height: 300px; /* Tamanho inicial do Pokémon */
     transition: all 0.3s ease;
     margin-bottom: 50px;
     cursor: pointer;
@@ -80,38 +76,52 @@ html {
     margin-top: 10px;
 }
 
-.lista-personagem .personagem .info-wrapper {
-    display: flex;
-    flex-direction: column; /* Informações empilhadas */
-    justify-content: flex-start; /* As informações começam empilhadas */
-    margin-top: 10px;
-    margin-left: 20px; /* Espaço entre a imagem e as informações */
-    width: 100%;
-    padding-left: 10px;
+lista-personagens .personagem .nome,
+.lista-personagens .personagem .tipo {
+    text-align: center;
+    margin-bottom: 10px; /* Adiciona um espaço entre as informações */
 }
 
-.lista-personagem .personagem .aniversario,
-.lista-personagem .personagem .presentes,
-.lista-personagem .personagem .curiosidades {
+.lista-personagem .personagem .info-escondido {
+    display: none; /* Fica invisível inicialmente */
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    margin-left: 20px; /* Espaço entre a imagem e as informações */
+
+   
+}
+
+
+
+.info-escondido {
     font-family: "Rubik", sans-serif;
     font-size: 16px;
     display: none; /* Fica invisível inicialmente */
     text-align: left;
     margin-top: 5px;
-} 
-
-/* Quando expandido, as informações ficam visíveis e o Pokémon se expande */
-.lista-personagem .personagem.expandido {
-    height: 350px; /* Expande a altura para acomodar as informações extras */
-    flex-direction: row; /* Layout muda para linha */
-    align-items: flex-start; /* Alinha o conteúdo no topo */
-    width: 700px; /* Expande a largura para acomodar as informações ao lado */
 }
 
-.lista-personagem .personagem.expandido .aniversario,
-.lista-personagem .personagem.expandido .presentes,
-.lista-personagem .personagem.expandido .curiosidades {
+/* Quando expandido, as informações ficam visíveis e o Pokémon se expande */
+.lista-personagens .personagem.expandido .info-escondido  {
+ 
     display: block; /* Torna as informações visíveis */
+    margin-top: 10px;
+    width: 400px; /* Ajusta a largura para o conteúdo expandido */
+    padding-left: 10px;
+    flex-direction: column; /* Informações empilhadas dentro da caixa expandida */
+    margin-left: 20px;
+
+}
+
+.personagem.expandido .info-escondido {
+    display: block; /* Torna as informações visíveis */
+    
+}
+
+.lista-personagens .personagem.expandido {
+    flex-direction: row; /* Muda o layout para linha ao expandir */
+    width: 700px; /* Expande a largura */
+    height: auto; /* Deixa a altura automática para acomodar as informações */
 }
 
 .Casável {
@@ -120,7 +130,11 @@ width: 100px;
     margin: 20px;
 }
 
-.nao-casavel {
+.Não-casável {
     background-color: grey;
     color: white
+}
+
+.personagem .nome, .personagem .tipo {
+    text-align: center;
 }
