@@ -109,7 +109,7 @@ lista-personagens .personagem .nome,
     width: 400px; /* Ajusta a largura para o conteúdo expandido */
     padding-left: 10px;
     flex-direction: column; /* Informações empilhadas dentro da caixa expandida */
-    margin-left: 20px;
+    margin-left: 40px;
 
 }
 
