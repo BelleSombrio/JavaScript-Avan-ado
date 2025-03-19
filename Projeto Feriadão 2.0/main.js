@@ -342,6 +342,11 @@ let personagens = [
     },
 ];
 
+let itens = {
+    pimenta: "",
+    primavera: ""
+}
+itens.pimenta
 personagens.forEach(personagem => {
     let lista = document.querySelector(".lista-personagens");
     lista.innerHTML += `
